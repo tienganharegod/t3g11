@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề Thi Giữa Kỳ 1 Lớp 11 (Tạ Quang Bửu - Mã 1112) - Ms Lê Hằng English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8854C0;
+      --secondary: #FDCB6E;
+      --accent: #00C9A7;
+      --success: #00D26A;
+      --danger: #FF4757;
+      --bg-card: #FFFFFF;
+      --text-main: #2D3436;
+      --border-color: #E2E8F0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: 'Nunito', 'Quicksand', sans-serif;
+      min-height: 100vh;
+      color: var(--text-main);
+      background: linear-gradient(135deg, #a8c0ff 0%, #c8d6e5 20%, #fed6e3 45%, #d5fefd 70%, #a8c0ff 100%);
+      background-size: 400% 400%;
+      animation: gradientBG 18s ease infinite;
+      position: relative;
+      overflow-x: hidden;
+      padding-bottom: 120px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .bg-pattern { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+    .floating-item { position: absolute; opacity: 0.35; animation: floatAround 14s infinite ease-in-out alternate; }
+    @keyframes floatAround {
+      0% { transform: translateY(0) rotate(0deg) scale(0.9); }
+      50% { transform: translateY(-25px) rotate(15deg) scale(1.05); }
+      100% { transform: translateY(15px) rotate(-15deg) scale(0.95); }
+    }
+
+    .bottom-railway { position: fixed; bottom: 0; left: 0; width: 100%; height: 44px; background: #2C3E50; border-top: 5px solid #27AE60; z-index: 9; display: flex; align-items: center; overflow: hidden; box-shadow: 0 -4px 15px rgba(0,0,0,0.15); }
+    .railway-lines { width: 200%; height: 6px; background: repeating-linear-gradient(90deg, #FFFFFF, #FFFFFF 30px, transparent 30px, transparent 60px); animation: moveRoad 3s linear infinite; }
+    @keyframes moveRoad { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .animated-train { position: fixed; bottom: 10px; left: -150px; font-size: 28px; z-index: 10; animation: driveTrain 18s linear infinite; }
+    @keyframes driveTrain { 0% { left: -120px; } 100% { left: 105vw; } }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 14px 16px 50px; position: relative; z-index: 10; }
+
+    .top-progress-bar { position: sticky; top: 10px; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); padding: 10px 18px; border-radius: 50px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 14px; margin-bottom: 16px; border: 2px solid #FFF; }
+    .score-badge { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 30px; font-weight: 800; font-size: 15px; color: #FFF; white-space: nowrap; }
+    .badge-star { background: linear-gradient(135deg, #FF6B8B, #FF8E53); }
+    .badge-check { background: linear-gradient(135deg, #00D26A, #00B894); }
+    .progress-track { flex: 1; height: 16px; background: #E2E8F0; border-radius: 20px; overflow: hidden; border: 2px solid #FFF; }
+    .progress-fill { width: 0%; height: 100%; background: linear-gradient(90deg, #FDCB6E, #00C9A7, #00D26A); border-radius: 20px; transition: width 0.4s ease; }
+
+    .warning-banner { background: linear-gradient(135deg, #FFF0F2 0%, #FFF5EB 100%); border: 2px solid #FF7675; border-left: 8px solid #FF4757; border-radius: 18px; padding: 14px 18px; margin-bottom: 20px; box-shadow: 0 6px 16px rgba(255, 71, 87, 0.12); }
+    .warning-title { color: #D63031; font-weight: 900; font-size: 15px; display: flex; align-items: center; gap: 8px; margin-bottom: 6px; text-transform: uppercase; }
+    .warning-text { color: #4A4A4A; font-size: 14.5px; line-height: 1.55; font-weight: 600; }
+    .warning-highlight { color: #C0392B; font-weight: 800; }
+
+    .hero-card { background: #FFFFFF; border-radius: 26px; padding: 22px 26px; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07); margin-bottom: 22px; display: flex; align-items: center; justify-content: space-between; border: 3px solid #F0F3F8; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #0984E3, #00CEC9); color: #FFF; padding: 4px 12px; border-radius: 20px; font-size: 12.5px; font-weight: 800; margin-bottom: 8px; }
+    .hero-title { font-size: 25px; font-weight: 900; background: linear-gradient(135deg, #0984E3, #6C5CE7, #E84393); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; }
+    .hero-sub { color: #636E72; font-size: 13.5px; font-weight: 700; margin-bottom: 10px; }
+    .hero-teacher-pill { display: inline-flex; align-items: center; gap: 6px; background: #F8E7F6; color: #8854C0; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid #E8C6EF; }
+
+    .section-badge-card { background: linear-gradient(135deg, #6C5CE7, #a29bfe); color: #FFF; border-radius: 18px; padding: 12px 18px; margin: 28px 0 16px; font-weight: 900; font-size: 16px; display: flex; align-items: center; gap: 10px; box-shadow: 0 6px 16px rgba(108, 92, 231, 0.25); }
+    .reading-passage-box { background: #FFFFFF; border-left: 6px solid #00CEC9; border-radius: 20px; padding: 18px 22px; margin-bottom: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.05); font-size: 15px; line-height: 1.7; color: #2D3436; }
+
+    .question-card { background: var(--bg-card); border-radius: 24px; padding: 22px; margin-bottom: 22px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 2px solid #EDF2F7; }
+    .q-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .q-number-pill { background: #8854C0; color: #FFF; font-weight: 900; padding: 4px 14px; border-radius: 14px; font-size: 13px; box-shadow: 0 3px 0 #5E358A; }
+    .q-type-pill { background: #E8F0FE; color: #1A73E8; font-weight: 700; padding: 4px 12px; border-radius: 12px; font-size: 12px; }
+    .q-text { font-size: 16.5px; font-weight: 700; color: #2D3436; line-height: 1.55; margin-bottom: 16px; }
+
+    .options-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 14px; }
+    @media (min-width: 620px) { .options-grid { grid-template-columns: 1fr 1fr; } }
+
+    .option-btn { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #FFFFFF; border: 2px solid var(--border-color); border-bottom: 5px solid #CBD5E1; border-radius: 18px; cursor: pointer; font-size: 15px; font-weight: 700; color: #2D3436; text-align: left; transition: all 0.15s ease; width: 100%; }
+    .option-btn:hover:not(.disabled) { transform: translateY(-2px); border-color: #8854C0; background: #FDFBFF; }
+    .opt-letter { width: 30px; height: 30px; border-radius: 10px; background: #F1F2F6; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #57606F; flex-shrink: 0; font-size: 14px; }
+    .option-btn.correct { background: #EAFDF3 !important; border-color: #00D26A !important; border-bottom: 5px solid #00A352 !important; color: #00733B !important; }
+    .option-btn.correct .opt-letter { background: #00D26A; color: #FFF; }
+    .option-btn.wrong { background: #FFF1F2 !important; border-color: #FF4757 !important; border-bottom: 5px solid #D63031 !important; color: #C0392B !important; animation: shake 0.45s ease; }
+    .option-btn.wrong .opt-letter { background: #FF4757; color: #FFF; }
+    .option-btn.disabled { cursor: default; opacity: 0.88; }
+
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(6px); } }
+
+    .explanation-box { display: none; background: #FAFBFF; border: 2px dashed #8854C0; border-radius: 20px; padding: 16px 18px; margin-top: 14px; }
+    .exp-title { color: #FF4757; font-size: 16px; font-weight: 900; margin-bottom: 10px; text-transform: uppercase; }
+    .translation-bar { background: #FFF8E7; border-left: 5px solid #FDCB6E; border-radius: 12px; padding: 10px 14px; color: #2D3436; font-size: 14.5px; font-weight: 700; margin-bottom: 12px; }
+    .exp-grid { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 12px; }
+    @media (min-width: 600px) { .exp-grid { grid-template-columns: 1fr 1fr; } }
+    .exp-item-card { background: #FFFFFF; border: 1.5px solid #E2E8F0; border-radius: 12px; padding: 8px 12px; font-size: 13.5px; line-height: 1.4; }
+    .opt-name { font-weight: 800; color: #0984E3; margin-right: 4px; }
+    .badge-pill { display: inline-block; font-size: 11px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-right: 4px; }
+    .badge-pill.bad { background: #FFE8E6; color: #FF4757; }
+    .badge-pill.info { background: #E8F0FE; color: #2E86DE; }
+    .badge-pill.good { background: #E3FAEC; color: #00B894; }
+    .why-correct-box { background: #F0FFF4; border: 1.5px solid #C6F6D5; border-radius: 14px; padding: 10px 14px; margin-bottom: 10px; color: #22543D; font-size: 14px; line-height: 1.55; font-weight: 600; }
+    .why-wrong-box { background: #FFF5F5; border: 1.5px solid #FED7D7; border-radius: 14px; padding: 10px 14px; color: #742A2A; font-size: 14px; line-height: 1.55; font-weight: 600; }
+    .highlight-rule { background: #FEFCBF; color: #744210; padding: 2px 8px; border-radius: 6px; font-weight: 800; }
+    .highlight-target { color: #00A352; font-weight: 800; }
+
+    .submit-bar { text-align: center; margin-top: 36px; }
+    .btn-submit { background: linear-gradient(135deg, #FF6B8B, #FF8E53); color: #FFF; border: none; border-bottom: 6px solid #D63031; border-radius: 25px; padding: 16px 42px; font-size: 19px; font-weight: 900; cursor: pointer; box-shadow: 0 10px 25px rgba(255, 107, 139, 0.35); display: inline-flex; align-items: center; gap: 10px; }
+
+    .promo-banner { background: linear-gradient(135deg, #D63031 0%, #E84393 50%, #0984E3 100%); border-radius: 22px; padding: 22px 24px; color: #FFF; box-shadow: 0 10px 25px rgba(232, 67, 147, 0.25); margin-top: 36px; text-align: center; border: 2px solid rgba(255,255,255,0.4); }
+    .promo-title { font-size: 17px; font-weight: 900; margin-bottom: 10px; line-height: 1.5; }
+    .promo-phone-pill { display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; color: #D63031; padding: 8px 22px; border-radius: 25px; font-weight: 900; font-size: 18px; margin: 4px 0 10px; }
+    .promo-sub { font-size: 14.5px; font-weight: 700; }
+
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-card { background: #FFFFFF; width: 100%; max-width: 520px; border-radius: 28px; padding: 32px 26px; text-align: center; border: 4px solid #FDCB6E; }
+    .modal-score { font-size: 40px; font-weight: 900; color: #8854C0; margin-bottom: 6px; }
+    .modal-feedback { background: #F8F9FA; border-left: 5px solid #8854C0; border-radius: 14px; padding: 16px; margin: 18px 0; font-size: 15px; line-height: 1.55; color: #2D3436; font-weight: 700; text-align: left; }
+    .btn-retry { background: linear-gradient(135deg, #00C9A7, #00B894); color: #FFF; border: none; border-bottom: 5px solid #008f72; border-radius: 20px; padding: 14px 34px; font-size: 17px; font-weight: 800; cursor: pointer; }
+    #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+  </style>
+</head>
+<body>
+
+  <div class="bg-pattern">
+    <svg class="floating-item" style="top: 6%; left: 5%; width: 44px; height: 44px;" viewBox="0 0 24 24" fill="#FDCB6E"><path d="M12 1.5l3.09 6.26L22 8.77l-5 4.87 1.18 6.86L12 17.27l-6.18 3.23L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg>
+    <svg class="floating-item" style="top: 20%; right: 7%; width: 46px; height: 46px;" viewBox="0 0 24 24" fill="#FF7675"><circle cx="12" cy="12" r="4" fill="#FDCB6E"/><circle cx="12" cy="5" r="3.5" fill="#FF7675"/><circle cx="19" cy="12" r="3.5" fill="#FF7675"/><circle cx="12" cy="19" r="3.5" fill="#FF7675"/><circle cx="5" cy="12" r="3.5" fill="#FF7675"/></svg>
+    <svg class="floating-item" style="top: 62%; right: 5%; width: 48px; height: 48px;" viewBox="0 0 24 24" fill="#8854C0"><path d="M12 3c-4.97 0-9 3.58-9 8 0 2.45 1.25 4.67 3.23 6.13L5 21l4.47-1.49C10.27 19.8 11.12 20 12 20c4.97 0 9-3.58 9-8s-4.03-9-9-9zm-3 8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+  </div>
+
+  <div class="bottom-railway"><div class="railway-lines"></div></div>
+  <div class="animated-train">🚇 🚃 🚃</div>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="container">
+
+    <div class="top-progress-bar">
+      <div class="score-badge badge-star"><span>⭐</span><span id="starCounter">0</span>/40</div>
+      <div class="progress-track"><div id="progressBarFill" class="progress-fill"></div></div>
+      <div class="score-badge badge-check"><span>✅</span><span id="correctCounter">0</span>/40</div>
+    </div>
+
+    <div class="warning-banner">
+      <div class="warning-title"><span>⚠️</span> LỜI NHẮC CỰC KỲ QUAN TRỌNG <span>⚠️</span></div>
+      <div class="warning-text">
+        Chỉ có <span class="warning-highlight">đọc kỹ giải thích ngay sau mỗi câu</span>, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên. Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!
+        <br><strong>Kéo tới đâu, làm tới đó! *</strong>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div>
+        <div class="hero-tag"><span>🌟</span> ĐỀ KIỂM TRA GIỮA HỌC KỲ I NĂM HỌC 2026 - 2027 · MÃ ĐỀ 1112</div>
+        <h1 class="hero-title">Tiếng Anh 11 - Trường THCS & THPT Tạ Quang Bửu</h1>
+        <div class="hero-sub">Walkable Cities · The Sharing Economy · Carbon Footprint · FitLife Studio · Word Form & Prepositions</div>
+        <div class="hero-teacher-pill"><span>👩‍🏫</span> Giáo viên tạo: Ms Lê Hằng English</div>
+      </div>
+    </div>
+
+    <!-- TOÀN BỘ 40 CÂU HỎI ĐƯỢC CHÈN TĨNH TRỰC TIẾP TRONG HTML -->
+    <div id="questionsContainer">
+
+      <!-- PART 1: WALKABLE CITIES (Q1 - Q5) -->
+      <div class="section-badge-card"><span>🚶</span><div><div>PART 1: WALKABLE CITIES (QUESTIONS 1 - 5)</div><div style="font-size: 13px; font-weight: 600;">Read the passage and mark the letter A, B, C, or D that best fits each numbered blank</div></div></div>
+
+      <div class="reading-passage-box">
+        Walkable cities are becoming more popular around the world. These cities are designed for people, not cars. In walkable cities, everything you need is close to your home. You can walk to shops, schools, parks, and restaurants in just 15 minutes. This makes life easier and healthier for everyone. <strong>(1)</strong> __________, we would have fewer problems today. Walking is good for our health and the environment. When people walk more, they get exercise every day without going to the gym. The air becomes cleaner because fewer cars are on the roads. <strong>(2)</strong> __________; it also creates stronger communities. Many cities are changing their designs to become more walkable. Wide sidewalks, <strong>(3)</strong> __________, are essential features of walkable cities. Trees are planted along streets, and benches are installed for people to rest. People living in walkable neighborhoods enjoy better health and save money on transportation; they also have more time to spend with family and friends. Urban planners, <strong>(4)</strong> __________, now focus on human needs. When we create spaces where people can move easily without cars, everyone benefits. Children can play safely, older people can stay active, and communities become stronger. Walkable cities are not just a dream - <strong>(5)</strong> __________.
+      </div>
+
+      <!-- Q1 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 1</span><span class="q-type-pill">MIXED CONDITIONAL</span></div>
+        <div class="q-text">(1) __________, we would have fewer problems today.</div>
+        <div class="options-grid" id="optgrid_1">
+          <button class="option-btn" onclick="chooseAnswer(1, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">If cities had been designed for people instead of cars from the beginning</div></button>
+          <button class="option-btn" onclick="chooseAnswer(1, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">That urban areas created pathways connecting homes to essential services</div></button>
+          <button class="option-btn" onclick="chooseAnswer(1, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">Which cities designed with spaces for walking rather than driving everywhere</div></button>
+          <button class="option-btn" onclick="chooseAnswer(1, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">Having planners considered automobile convenience before pedestrian needs</div></button>
+        </div>
+        <div class="explanation-box" id="exp_1">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Nếu các thành phố được thiết kế cho con người thay vì xe hơi ngay từ đầu, thì ngày nay chúng ta sẽ có ít vấn đề hơn.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Vế sau là mệnh đề chính của câu điều kiện hỗn hợp (we would have... today), nên vế trước cần mệnh đề điều kiện loại 3 giả định điều trái với quá khứ: <span class="highlight-target">If cities had been designed...</span></div>
+          <div class="why-wrong-box"><strong>❌ TẠI SAO SAI?</strong> B, C, D không phải là mệnh đề điều kiện hợp ngữ pháp để kết hợp với "we would have...".</div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 2</span><span class="q-type-pill">INDEPENDENT CLAUSE</span></div>
+        <div class="q-text">(2) __________; it also creates stronger communities.</div>
+        <div class="options-grid" id="optgrid_2">
+          <button class="option-btn" onclick="chooseAnswer(2, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">Not only walking makes commuters feel exhausted</div></button>
+          <button class="option-btn" onclick="chooseAnswer(2, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">Driving increases convenience but causes more pollution daily</div></button>
+          <button class="option-btn" onclick="chooseAnswer(2, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">Cities require planning that prioritizes vehicle movement</div></button>
+          <button class="option-btn" onclick="chooseAnswer(2, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">Walking reduces stress and helps people feel happier</div></button>
+        </div>
+        <div class="explanation-box" id="exp_2">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Đi bộ giúp giảm căng thẳng và giúp mọi người cảm thấy hạnh phúc hơn; nó cũng tạo ra những cộng đồng gắn kết hơn.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Vế sau dấu chấm phẩy có đại từ "it" và trạng từ "also" nêu lợi ích của việc đi bộ (Walking), nên vế trước phải có chủ ngữ là <span class="highlight-target">Walking</span> và nêu lợi ích tích cực.</div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 3</span><span class="q-type-pill">RELATIVE CLAUSE</span></div>
+        <div class="q-text">Wide sidewalks, (3) __________, are essential features of walkable cities.</div>
+        <div class="options-grid" id="optgrid_3">
+          <button class="option-btn" onclick="chooseAnswer(3, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">that cars will parking and traffic has been prioritized</div></button>
+          <button class="option-btn" onclick="chooseAnswer(3, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">whom residents using to access shops and public services</div></button>
+          <button class="option-btn" onclick="chooseAnswer(3, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">was designed primarily for vehicle movement in cities</div></button>
+          <button class="option-btn" onclick="chooseAnswer(3, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">which provide space for both pedestrians and small businesses</div></button>
+        </div>
+        <div class="explanation-box" id="exp_3">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Những vỉa hè rộng rãi, vốn cung cấp không gian cho cả người đi bộ và các hộ kinh doanh nhỏ, là những đặc điểm thiết yếu của các thành phố đi bộ.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Mệnh đề quan hệ không xác định nằm giữa 2 dấu phẩy bổ nghĩa cho danh từ số nhiều chỉ vật "Wide sidewalks": dùng <span class="highlight-target">which provide...</span></div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 4</span><span class="q-type-pill">PARTICIPLE PHRASE</span></div>
+        <div class="q-text">Urban planners, (4) __________, now focus on human needs.</div>
+        <div class="options-grid" id="optgrid_4">
+          <button class="option-btn" onclick="chooseAnswer(4, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">have designed public transit for urban mobility</div></button>
+          <button class="option-btn" onclick="chooseAnswer(4, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">designing walkable spaces with pedestrian priorities</div></button>
+          <button class="option-btn" onclick="chooseAnswer(4, 'C', true, this)"><div class="opt-letter">C</div><div class="opt-text">having designed cities for cars for many decades</div></button>
+          <button class="option-btn" onclick="chooseAnswer(4, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">who designed green spaces throughout neighborhoods</div></button>
+        </div>
+        <div class="explanation-box" id="exp_4">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Các nhà quy hoạch đô thị, sau nhiều thập kỷ thiết kế thành phố cho xe hơi, giờ đây tập trung vào nhu cầu của con người.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm phân từ hoàn thành <span class="highlight-target">having designed cities for cars for many decades</span> diễn tả hành động kéo dài trong quá khứ đối lập với sự thay đổi ở hiện tại ("now focus on human needs").</div>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 5</span><span class="q-type-pill">CONCLUDING CLAUSE</span></div>
+        <div class="q-text">Walkable cities are not just a dream - (5) __________.</div>
+        <div class="options-grid" id="optgrid_5">
+          <button class="option-btn" onclick="chooseAnswer(5, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">public spaces decrease as cities expand their boundaries</div></button>
+          <button class="option-btn" onclick="chooseAnswer(5, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">they are becoming reality in many places around the world</div></button>
+          <button class="option-btn" onclick="chooseAnswer(5, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">urban designers focus primarily on vehicle infrastructure</div></button>
+          <button class="option-btn" onclick="chooseAnswer(5, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">cars remain essential for suburban commuters every day</div></button>
+        </div>
+        <div class="explanation-box" id="exp_5">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Các thành phố đi bộ không chỉ là một giấc mơ - chúng đang trở thành hiện thực ở nhiều nơi trên thế giới.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Tương phản trực tiếp với "not just a dream" (không chỉ là giấc mơ) là <span class="highlight-target">they are becoming reality...</span> (chúng đang trở thành hiện thực).</div>
+        </div>
+      </div>
+
+      <!-- PART 2: THE SHARING ECONOMY (Q6 - Q15) -->
+      <div class="section-badge-card"><span>🚗</span><div><div>PART 2: READING COMPREHENSION - THE SHARING ECONOMY (QUESTIONS 6 - 15)</div><div style="font-size: 13px; font-weight: 600;">Đọc đoạn văn về nền kinh tế chia sẻ và trả lời các câu hỏi từ 6 đến 15</div></div></div>
+
+      <div class="reading-passage-box">
+        <strong>[Paragraph 1]</strong> The sharing economy represents a shift in how people access goods and services. Instead of buying products, consumers can borrow or rent items from others. <strong>(I)</strong> Platforms like Airbnb let homeowners rent rooms to travelers, while car-sharing services let vehicle owners earn money when they're not using their cars. <strong>(II)</strong> The sharing model also works well for items that sit <strong><u>unused</u></strong>, such as tools or camping equipment. <strong>(III)</strong> Because fewer products need to be manufactured, this approach can help reduce waste and lower emissions, especially in metropolitan areas. <strong>(IV)</strong><br>
+        <strong>[Paragraph 2]</strong> Environmental benefits of sharing economies are substantial. When people share resources, fewer products are required, reducing manufacturing pollution. Each shared car can replace up to thirteen private vehicles, <strong><u>significantly</u></strong> cutting carbon emissions. Sharing platforms encourage reuse of existing goods rather than buying new ones. This extends the useful life of products that might otherwise be discarded, helping minimize landfill waste and conserve resources.<br>
+        <strong>[Paragraph 3]</strong> Financial advantages make sharing economies attractive to participants. Owners generate income from underutilized assets, while users save by paying only for what <strong><u>they</u></strong> need. Someone needing a drill for one project can rent instead of buying. A person with an empty driveway can rent the space to commuters. These transactions benefit both parties while promoting efficient resource use. However, critics are worried about job security for workers and safety regulations in these new arrangements.<br>
+        <strong>[Paragraph 4]</strong> <strong><u>The future of sharing economies looks promising as technology makes connections between owners and users easier.</u></strong> Mobile apps allow instant transactions between strangers with rating systems that build trust. Young consumers embrace these platforms, valuing experiences over ownership. As environmental concerns grow, more people see sharing resources as economical and responsible. Cities are adapting regulations to accommodate these business models while ensuring consumer protection and fair competition.
+      </div>
+
+      <!-- Q6 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 6</span><span class="q-type-pill">SENTENCE INSERTION</span></div>
+        <div class="q-text">Where in paragraph 1 does the following sentence best fit?<br><strong>“By making better use of existing resources, the sharing economy can benefit both consumers and the environment in the long run.”</strong></div>
+        <div class="options-grid" id="optgrid_6">
+          <button class="option-btn" onclick="chooseAnswer(6, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">[I]</div></button>
+          <button class="option-btn" onclick="chooseAnswer(6, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">[II]</div></button>
+          <button class="option-btn" onclick="chooseAnswer(6, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">[III]</div></button>
+          <button class="option-btn" onclick="chooseAnswer(6, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">[IV]</div></button>
+        </div>
+        <div class="explanation-box" id="exp_6">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Ở vị trí <span class="highlight-target">[IV]</span> cuối đoạn 1, câu văn đóng vai trò tổng kết cả lợi ích cho người tiêu dùng (đã nêu ở đầu đoạn 1) và lợi ích cho môi trường (vừa nêu ở câu liền trước: "reduce waste and lower emissions"), đồng thời làm câu chuyển ý mượt mà sang đoạn 2 ("Environmental benefits...") và đoạn 3 ("Financial advantages...").</div>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 7</span><span class="q-type-pill">NOT MENTIONED</span></div>
+        <div class="q-text">Which of the following is NOT mentioned as a benefit of sharing economies?</div>
+        <div class="options-grid" id="optgrid_7">
+          <button class="option-btn" onclick="chooseAnswer(7, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">Reducing waste from manufacturing</div></button>
+          <button class="option-btn" onclick="chooseAnswer(7, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">Generating income for asset owners</div></button>
+          <button class="option-btn" onclick="chooseAnswer(7, 'C', true, this)"><div class="opt-letter">C</div><div class="opt-text">Improving public transportation infrastructure</div></button>
+          <button class="option-btn" onclick="chooseAnswer(7, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">Extending the useful life of products</div></button>
+        </div>
+        <div class="explanation-box" id="exp_7">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Bài đọc đề cập giảm rác thải sản xuất (A - đoạn 1, 2), tạo thu nhập cho chủ tài sản (B - đoạn 3), kéo dài vòng đời sản phẩm (D - đoạn 2), nhưng KHÔNG đề cập đến việc cải thiện cơ sở hạ tầng giao thông công cộng (<span class="highlight-target">Improving public transportation infrastructure</span>).</div>
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 8</span><span class="q-type-pill">ANTONYM</span></div>
+        <div class="q-text">The word "unused" in paragraph 1 is OPPOSITE in meaning to __________.</div>
+        <div class="options-grid" id="optgrid_8">
+          <button class="option-btn" onclick="chooseAnswer(8, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">available</div></button>
+          <button class="option-btn" onclick="chooseAnswer(8, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">accessible</div></button>
+          <button class="option-btn" onclick="chooseAnswer(8, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">valuable</div></button>
+          <button class="option-btn" onclick="chooseAnswer(8, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">utilized</div></button>
+        </div>
+        <div class="explanation-box" id="exp_8">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> "unused" (không được sử dụng, bỏ không) >< trái nghĩa là <span class="highlight-target">utilized</span> (được sử dụng, được tận dụng).</div>
+        </div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 9</span><span class="q-type-pill">SYNONYM</span></div>
+        <div class="q-text">The word "significantly" in paragraph 2 could be best replaced by __________.</div>
+        <div class="options-grid" id="optgrid_9">
+          <button class="option-btn" onclick="chooseAnswer(9, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">dramatically</div></button>
+          <button class="option-btn" onclick="chooseAnswer(9, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">slightly</div></button>
+          <button class="option-btn" onclick="chooseAnswer(9, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">occasionally</div></button>
+          <button class="option-btn" onclick="chooseAnswer(9, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">potentially</div></button>
+        </div>
+        <div class="explanation-box" id="exp_9">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> "significantly" (một cách đáng kể, to lớn) đồng nghĩa với <span class="highlight-target">dramatically</span> (mạnh mẽ, đáng kể).</div>
+        </div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 10</span><span class="q-type-pill">REFERENCE</span></div>
+        <div class="q-text">The word "they" in paragraph 3 ("while users save by paying only for what <u>they</u> need") refers to __________.</div>
+        <div class="options-grid" id="optgrid_10">
+          <button class="option-btn" onclick="chooseAnswer(10, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">owners</div></button>
+          <button class="option-btn" onclick="chooseAnswer(10, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">users</div></button>
+          <button class="option-btn" onclick="chooseAnswer(10, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">assets</div></button>
+          <button class="option-btn" onclick="chooseAnswer(10, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">transactions</div></button>
+        </div>
+        <div class="explanation-box" id="exp_10">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> "...trong khi người dùng (users) tiết kiệm bằng cách chỉ trả tiền cho những gì <strong>họ (they = <span class="highlight-target">users</span>)</strong> cần."</div>
+        </div>
+      </div>
+
+      <!-- Q11 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 11</span><span class="q-type-pill">PARAPHRASE</span></div>
+        <div class="q-text">Which of the following best paraphrases the underlined sentence in paragraph 4?<br><strong>“The future of sharing economies looks promising as technology makes connections between owners and users easier.”</strong></div>
+        <div class="options-grid" id="optgrid_11">
+          <button class="option-btn" onclick="chooseAnswer(11, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">Future economic systems will depend entirely on advanced technological developments.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(11, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">Sharing platforms are becoming popular mainly because of their sophisticated interfaces.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(11, 'C', true, this)"><div class="opt-letter">C</div><div class="opt-text">Technological advances enable simpler interactions that will likely boost sharing economies.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(11, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">Digital connections between people are replacing traditional economic transactions globally.</div></button>
+        </div>
+        <div class="explanation-box" id="exp_11">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> "technology makes connections... easier" = "Technological advances enable simpler interactions"; "The future of sharing economies looks promising" = "will likely boost sharing economies": <span class="highlight-target">Đáp án C</span>.</div>
+        </div>
+      </div>
+
+      <!-- Q12 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 12</span><span class="q-type-pill">TRUE STATEMENT</span></div>
+        <div class="q-text">Which of the following is TRUE according to the passage?</div>
+        <div class="options-grid" id="optgrid_12">
+          <button class="option-btn" onclick="chooseAnswer(12, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">Sharing economies benefit only wealthy homeowners who have extra space to rent.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(12, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">Most cities have banned sharing platforms due to safety regulation concerns.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(12, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">Young consumers prefer ownership over experiences in the modern economy.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(12, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">Each shared vehicle can potentially replace thirteen privately owned automobiles.</div></button>
+        </div>
+        <div class="explanation-box" id="exp_12">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Đoạn 2 viết rõ: "Each shared car can replace up to thirteen private vehicles" -> khớp hoàn toàn với <span class="highlight-target">Đáp án D</span>.</div>
+        </div>
+      </div>
+
+      <!-- Q13 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 13</span><span class="q-type-pill">MAIN SUMMARY</span></div>
+        <div class="q-text">Which of the following best summarizes the passage?</div>
+        <div class="options-grid" id="optgrid_13">
+          <button class="option-btn" onclick="chooseAnswer(13, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">Peer-to-peer platforms allow consumers to rent goods easily, offering flexible access to assets without owning them.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(13, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">The sharing economy offers financial and environmental benefits, though regulatory and job security concerns remain.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(13, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">Sharing platforms let individuals earn passive income from unused property, appealing strongly to younger consumers.</div></button>
+          <button class="option-btn" onclick="chooseAnswer(13, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">While resource sharing cuts waste and emissions, cities must reform regulations to protect consumers and workers.</div></button>
+        </div>
+        <div class="explanation-box" id="exp_13">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Bao quát trọn vẹn nội dung chính toàn bài: lợi ích môi trường (đoạn 1, 2), lợi ích tài chính và những lo ngại về công việc/quy định an toàn (đoạn 3, 4): <span class="highlight-target">Đáp án B</span>.</div>
+        </div>
+      </div>
+
+      <!-- Q14 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 14</span><span class="q-type-pill">PARAGRAPH LOCATION</span></div>
+        <div class="q-text">In which paragraph does the writer mention the role of digital technology in facilitating user trust?</div>
+        <div class="options-grid" id="optgrid_14">
+          <button class="option-btn" onclick="chooseAnswer(14, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">Paragraph 1</div></button>
+          <button class="option-btn" onclick="chooseAnswer(14, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">Paragraph 3</div></button>
+          <button class="option-btn" onclick="chooseAnswer(14, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">Paragraph 2</div></button>
+          <button class="option-btn" onclick="chooseAnswer(14, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">Paragraph 4</div></button>
+        </div>
+        <div class="explanation-box" id="exp_14">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Ở <span class="highlight-target">Paragraph 4</span>, tác giả viết: "Mobile apps allow instant transactions between strangers with rating systems that build trust."</div>
+        </div>
+      </div>
+
+      <!-- Q15 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 15</span><span class="q-type-pill">PARAGRAPH LOCATION</span></div>
+        <div class="q-text">In which paragraph does the writer mention what one concern about sharing economies is?</div>
+        <div class="options-grid" id="optgrid_15">
+          <button class="option-btn" onclick="chooseAnswer(15, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">Paragraph 1</div></button>
+          <button class="option-btn" onclick="chooseAnswer(15, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">Paragraph 3</div></button>
+          <button class="option-btn" onclick="chooseAnswer(15, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">Paragraph 2</div></button>
+          <button class="option-btn" onclick="chooseAnswer(15, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">Paragraph 4</div></button>
+        </div>
+        <div class="explanation-box" id="exp_15">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Câu cuối của <span class="highlight-target">Paragraph 3</span> nêu rõ mối lo ngại: "However, critics are worried about job security for workers and safety regulations in these new arrangements."</div>
+        </div>
+      </div>
+
+      <!-- PART 3: ARRANGEMENT (Q16 - Q18) -->
+      <div class="section-badge-card"><span>🔄</span><div><div>PART 3: UTTERANCE & PARAGRAPH ARRANGEMENT (QUESTIONS 16 - 18)</div><div style="font-size: 13px; font-weight: 600;">Sắp xếp hội thoại, bức thư và đoạn văn theo trình tự logic</div></div></div>
+
+      <!-- Q16 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 16</span><span class="q-type-pill">DIALOGUE ORDER</span></div>
+        <div class="q-text">
+          a. Son: I know, but I believe I'm prepared to try out something that truly suits my passion.<br>
+          b. Son: Dad, I don't want to follow in your footsteps. I want to become a photographer and follow my dream.<br>
+          c. Dad: I'm not stopping you, but let me give you some advice—you need a stable career to support yourself.
+        </div>
+        <div class="options-grid" id="optgrid_16">
+          <button class="option-btn" onclick="chooseAnswer(16, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">c - a - b</div></button>
+          <button class="option-btn" onclick="chooseAnswer(16, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">a - b - c</div></button>
+          <button class="option-btn" onclick="chooseAnswer(16, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">b - a - c</div></button>
+          <button class="option-btn" onclick="chooseAnswer(16, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">b - c - a</div></button>
+        </div>
+        <div class="explanation-box" id="exp_16">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Người con mở lời về ước mơ làm nhiếp ảnh gia (b) -> Người bố khuyên cần sự nghiệp ổn định (c) -> Người con đáp lại "Con biết, nhưng con tin mình đã sẵn sàng..." (a): <span class="highlight-target">b - c - a</span>.</div>
+        </div>
+      </div>
+
+      <!-- Q17 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 17</span><span class="q-type-pill">LETTER ORDER</span></div>
+        <div class="q-text">
+          Dear Minnie,<br>
+          a. Thanks to it, my energy bill dropped by 30% last month! Can you believe it?<br>
+          b. I just installed my new smart home system! It turns off lights automatically when rooms are empty and adjusts the temperature based on weather forecasts.<br>
+          c. Even my refrigerator suggests recipes using ingredients before they expire, reducing food waste.<br>
+          d. This system also shows my daily water usage, helping me take shorter showers.<br>
+          e. Would you like to visit this weekend to see how it works? I think you'd love it for your apartment too!<br>
+          Best wishes, Mickey
+        </div>
+        <div class="options-grid" id="optgrid_17">
+          <button class="option-btn" onclick="chooseAnswer(17, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">c - d - a - b - e</div></button>
+          <button class="option-btn" onclick="chooseAnswer(17, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">b - a - d - c - e</div></button>
+          <button class="option-btn" onclick="chooseAnswer(17, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">e - b - a - d - c</div></button>
+          <button class="option-btn" onclick="chooseAnswer(17, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">b - e - a - d - c</div></button>
+        </div>
+        <div class="explanation-box" id="exp_17">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Mở đầu khoe vừa lắp hệ thống nhà thông minh tự tắt đèn/điều chỉnh nhiệt độ (b) -> Nhờ đó hóa đơn tiền điện giảm 30% (a) -> Hệ thống này cũng hiển thị lượng nước tiêu thụ (d) -> Thậm chí tủ lạnh còn gợi ý công thức nấu ăn (c) -> Cuối thư mời bạn cuối tuần ghé thăm (e): <span class="highlight-target">b - a - d - c - e</span>.</div>
+        </div>
+      </div>
+
+      <!-- Q18 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 18</span><span class="q-type-pill">PARAGRAPH ORDER</span></div>
+        <div class="q-text">
+          a. One way to stay healthy is to avoid harmful habits like smoking or drinking alcohol.<br>
+          b. Another important aspect is eating a balanced diet to strengthen the immune system.<br>
+          c. Foods like meat, fish, and dairy products provide the protein and calcium needed for strong muscles and bones.<br>
+          d. These can cause serious illnesses, including lung cancer, strokes, and heart-related diseases.<br>
+          e. Health and fitness mean a lot to our lives, so people find many ways to stay healthy.
+        </div>
+        <div class="options-grid" id="optgrid_18">
+          <button class="option-btn" onclick="chooseAnswer(18, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">e - a - d - b - c</div></button>
+          <button class="option-btn" onclick="chooseAnswer(18, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">a - d - e - c - b</div></button>
+          <button class="option-btn" onclick="chooseAnswer(18, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">e - a - b - c - d</div></button>
+          <button class="option-btn" onclick="chooseAnswer(18, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">a - b - e - d - c</div></button>
+        </div>
+        <div class="explanation-box" id="exp_18">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Câu chủ đề giới thiệu các cách giữ sức khỏe (e) -> Cách thứ nhất là tránh thói quen có hại như hút thuốc/uống rượu (a) -> "These" (hút thuốc, uống rượu) gây bệnh hiểm nghèo như ung thư phổi, đột quỵ (d) -> Khía cạnh quan trọng khác là ăn chế độ cân bằng (b) -> Dẫn chứng thực phẩm thịt, cá, sữa (c): <span class="highlight-target">e - a - d - b - c</span>.</div>
+        </div>
+      </div>
+
+      <!-- PART 4: LEAFLET & ADVERTISEMENT (Q19 - Q28) -->
+      <div class="section-badge-card"><span>🌱</span><div><div>PART 4: LEAFLET & ADVERTISEMENT CLOZE (QUESTIONS 19 - 28)</div><div style="font-size: 13px; font-weight: 600;">How to Reduce Your Carbon Footprint & Fit Body, Clear Mind!</div></div></div>
+
+      <!-- Q19 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 19</span><span class="q-type-pill">DETERMINERS</span></div>
+        <div class="q-text">The impact of our carbon footprint on climate change is undeniable, but how we address it is also (19) __________ matter.</div>
+        <div class="options-grid" id="optgrid_19">
+          <button class="option-btn" onclick="chooseAnswer(19, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">other</div></button>
+          <button class="option-btn" onclick="chooseAnswer(19, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">another</div></button>
+          <button class="option-btn" onclick="chooseAnswer(19, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">others</div></button>
+          <button class="option-btn" onclick="chooseAnswer(19, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">the others</div></button>
+        </div>
+        <div class="explanation-box" id="exp_19">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Danh từ "matter" (vấn đề) là danh từ đếm được số ít chưa xác định -> đi với <span class="highlight-target">another</span> (another matter: một vấn đề khác).</div>
+        </div>
+      </div>
+
+      <!-- Q20 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 20</span><span class="q-type-pill">PHRASAL VERB</span></div>
+        <div class="q-text">Reducing carbon emissions effectively (20) __________ immediate changes in our daily habits.</div>
+        <div class="options-grid" id="optgrid_20">
+          <button class="option-btn" onclick="chooseAnswer(20, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">looks up</div></button>
+          <button class="option-btn" onclick="chooseAnswer(20, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">comes over</div></button>
+          <button class="option-btn" onclick="chooseAnswer(20, 'C', true, this)"><div class="opt-letter">C</div><div class="opt-text">calls for</div></button>
+          <button class="option-btn" onclick="chooseAnswer(20, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">takes after</div></button>
+        </div>
+        <div class="explanation-box" id="exp_20">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Việc giảm lượng khí thải carbon một cách hiệu quả đòi hỏi/yêu cầu (calls for) những thay đổi ngay lập tức trong thói quen hàng ngày của chúng ta.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm động từ <span class="highlight-target">call for something</span> = require / demand (đòi hỏi, yêu cầu cái gì).</div>
+        </div>
+      </div>
+
+      <!-- Q21 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 21</span><span class="q-type-pill">PREPOSITIONAL PHRASE</span></div>
+        <div class="q-text">Unplug your devices (21) __________ leaving them on standby.</div>
+        <div class="options-grid" id="optgrid_21">
+          <button class="option-btn" onclick="chooseAnswer(21, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">with a view to</div></button>
+          <button class="option-btn" onclick="chooseAnswer(21, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">instead of</div></button>
+          <button class="option-btn" onclick="chooseAnswer(21, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">regardless of</div></button>
+          <button class="option-btn" onclick="chooseAnswer(21, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">in contrast to</div></button>
+        </div>
+        <div class="explanation-box" id="exp_21">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Hãy rút phích cắm các thiết bị của bạn thay vì (instead of) để chúng ở chế độ chờ.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> <span class="highlight-target">instead of + V-ing</span> (thay vì làm gì).</div>
+        </div>
+      </div>
+
+      <!-- Q22 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 22</span><span class="q-type-pill">WORD FORM / COLLOCATION</span></div>
+        <div class="q-text">Prepare home-cooked meals on a daily basis because they offer a wide (22) __________ of nutritious options.</div>
+        <div class="options-grid" id="optgrid_22">
+          <button class="option-btn" onclick="chooseAnswer(22, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">variety</div></button>
+          <button class="option-btn" onclick="chooseAnswer(22, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">vary</div></button>
+          <button class="option-btn" onclick="chooseAnswer(22, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">various</div></button>
+          <button class="option-btn" onclick="chooseAnswer(22, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">variable</div></button>
+        </div>
+        <div class="explanation-box" id="exp_22">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm lượng từ cố định: <span class="highlight-target">a wide variety of + N(số nhiều)</span> (nhiều chủng loại đa dạng).</div>
+        </div>
+      </div>
+
+      <!-- Q23 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 23</span><span class="q-type-pill">VOCABULARY</span></div>
+        <div class="q-text">Supporting local farmers also helps lower the environmental cost of food (23) __________.</div>
+        <div class="options-grid" id="optgrid_23">
+          <button class="option-btn" onclick="chooseAnswer(23, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">safety</div></button>
+          <button class="option-btn" onclick="chooseAnswer(23, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">packaging</div></button>
+          <button class="option-btn" onclick="chooseAnswer(23, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">creation</div></button>
+          <button class="option-btn" onclick="chooseAnswer(23, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">production</div></button>
+        </div>
+        <div class="explanation-box" id="exp_23">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Ủng hộ nông dân địa phương cũng giúp giảm chi phí môi trường của quá trình sản xuất lương thực thực phẩm (food production).</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Collocation chủ đề nông nghiệp và môi trường: <span class="highlight-target">food production</span> (sản xuất thực phẩm - gắn trực tiếp với hoạt động của "local farmers").</div>
+        </div>
+      </div>
+
+      <!-- Q24 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 24</span><span class="q-type-pill">VERB PATTERN</span></div>
+        <div class="q-text">Our program encourages you (24) __________ your lifestyle step by step...</div>
+        <div class="options-grid" id="optgrid_24">
+          <button class="option-btn" onclick="chooseAnswer(24, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">improve</div></button>
+          <button class="option-btn" onclick="chooseAnswer(24, 'B', true, this)"><div class="opt-letter">B</div><div class="opt-text">to improve</div></button>
+          <button class="option-btn" onclick="chooseAnswer(24, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">improving</div></button>
+          <button class="option-btn" onclick="chooseAnswer(24, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">improved</div></button>
+        </div>
+        <div class="explanation-box" id="exp_24">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cấu trúc: <span class="highlight-target">encourage someone to do something</span> (khuyến khích ai làm gì).</div>
+        </div>
+      </div>
+
+      <!-- Q25 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 25</span><span class="q-type-pill">QUANTIFIER</span></div>
+        <div class="q-text">...learn to plan balanced meals, set realistic goals, and celebrate (25) __________ little accomplishments along the way.</div>
+        <div class="options-grid" id="optgrid_25">
+          <button class="option-btn" onclick="chooseAnswer(25, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">most</div></button>
+          <button class="option-btn" onclick="chooseAnswer(25, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">much</div></button>
+          <button class="option-btn" onclick="chooseAnswer(25, 'C', true, this)"><div class="opt-letter">C</div><div class="opt-text">many</div></button>
+          <button class="option-btn" onclick="chooseAnswer(25, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">every</div></button>
+        </div>
+        <div class="explanation-box" id="exp_25">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> "accomplishments" là danh từ đếm được số nhiều (những thành tựu nhỏ). "every" chỉ đi với số ít, "much" đi với danh từ không đếm được -> dùng <span class="highlight-target">many</span>.</div>
+        </div>
+      </div>
+
+      <!-- Q26 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 26</span><span class="q-type-pill">REDUCED RELATIVE CLAUSE</span></div>
+        <div class="q-text">We offer many creative classes, from dance workouts to meditation sessions, (26) __________ to fit your busy schedule.</div>
+        <div class="options-grid" id="optgrid_26">
+          <button class="option-btn" onclick="chooseAnswer(26, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">designed</div></button>
+          <button class="option-btn" onclick="chooseAnswer(26, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">designing</div></button>
+          <button class="option-btn" onclick="chooseAnswer(26, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">which designed</div></button>
+          <button class="option-btn" onclick="chooseAnswer(26, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">was designed</div></button>
+        </div>
+        <div class="explanation-box" id="exp_26">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Rút gọn mệnh đề quan hệ bị động bổ nghĩa cho "creative classes": (which are) <span class="highlight-target">designed</span> to fit your busy schedule.</div>
+        </div>
+      </div>
+
+      <!-- Q27 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 27</span><span class="q-type-pill">PREPOSITION</span></div>
+        <div class="q-text">Each class is filled (27) __________ motivation, laughter, and encouragement from our friendly trainers...</div>
+        <div class="options-grid" id="optgrid_27">
+          <button class="option-btn" onclick="chooseAnswer(27, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">in</div></button>
+          <button class="option-btn" onclick="chooseAnswer(27, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">on</div></button>
+          <button class="option-btn" onclick="chooseAnswer(27, 'C', true, this)"><div class="opt-letter">C</div><div class="opt-text">with</div></button>
+          <button class="option-btn" onclick="chooseAnswer(27, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">from</div></button>
+        </div>
+        <div class="explanation-box" id="exp_27">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm cố định: <span class="highlight-target">be filled with something</span> (tràn ngập, đong đầy cái gì).</div>
+        </div>
+      </div>
+
+      <!-- Q28 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 28</span><span class="q-type-pill">NOUN PHRASE ORDER</span></div>
+        <div class="q-text">Take the first step today by building (28) __________ that help you stay active, reduce stress, and feel confident every single day!</div>
+        <div class="options-grid" id="optgrid_28">
+          <button class="option-btn" onclick="chooseAnswer(28, 'A', false, this)"><div class="opt-letter">A</div><div class="opt-text">plans personal fitness</div></button>
+          <button class="option-btn" onclick="chooseAnswer(28, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">fitness plans personal</div></button>
+          <button class="option-btn" onclick="chooseAnswer(28, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">personal plans fitness</div></button>
+          <button class="option-btn" onclick="chooseAnswer(28, 'D', true, this)"><div class="opt-letter">D</div><div class="opt-text">personal fitness plans</div></button>
+        </div>
+        <div class="explanation-box" id="exp_28">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Trật tự cụm danh từ: Tính từ (<span class="highlight-target">personal</span>) + Danh từ phụ chỉ mục đích (<span class="highlight-target">fitness</span>) + Danh từ chính (<span class="highlight-target">plans</span>) = kế hoạch rèn luyện thể chất cá nhân.</div>
+        </div>
+      </div>
+
+      <!-- PART 5: WORD FORMATION, PREPOSITIONS & SENTENCE TRANSFORMATION (Q29 - Q40) -->
+      <div class="section-badge-card"><span>✍️</span><div><div>PART 5: WORD FORM, PREPOSITIONS & SENTENCE COMPLETION (QUESTIONS 29 - 40)</div><div style="font-size: 13px; font-weight: 600;">Chia dạng đúng của từ · Điền giới từ phù hợp · Viết lại câu không quá 5 từ</div></div></div>
+
+      <!-- Q29 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 29</span><span class="q-type-pill">WORD FORMATION</span></div>
+        <div class="q-text">Digital platforms allow citizens to report problems in their neighbourhoods more ____________________ than traditional methods. <strong>(CONVENIENT)</strong></div>
+        <div class="options-grid" id="optgrid_29">
+          <button class="option-btn" onclick="chooseAnswer(29, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">conveniently</div></button>
+          <button class="option-btn" onclick="chooseAnswer(29, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">convenience</div></button>
+          <button class="option-btn" onclick="chooseAnswer(29, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">convenient</div></button>
+          <button class="option-btn" onclick="chooseAnswer(29, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">inconveniently</div></button>
+        </div>
+        <div class="explanation-box" id="exp_29">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="translation-bar">💬 <strong>Dịch:</strong> Các nền tảng kỹ thuật số cho phép người dân báo cáo các vấn đề trong khu phố của họ một cách thuận tiện hơn (more conveniently) so với các phương pháp truyền thống.</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Bổ nghĩa cho động từ thường "report (problems)" trong cấu trúc so sánh hơn cần một <strong>Trạng từ (Adverb)</strong>: <span class="highlight-target">conveniently</span>. (Lưu ý: Nếu điền "convenience" như chữ viết tay trên giấy thi là SAI từ loại vì danh từ không bổ nghĩa cho động từ report).</div>
+        </div>
+      </div>
+
+      <!-- Q30 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 30</span><span class="q-type-pill">WORD FORMATION</span></div>
+        <div class="q-text">The new system has greatly ____________________ the quality of public services. <strong>(IMPROVE)</strong></div>
+        <div class="options-grid" id="optgrid_30">
+          <button class="option-btn" onclick="chooseAnswer(30, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">improved</div></button>
+          <button class="option-btn" onclick="chooseAnswer(30, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">improvement</div></button>
+          <button class="option-btn" onclick="chooseAnswer(30, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">improving</div></button>
+          <button class="option-btn" onclick="chooseAnswer(30, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">improves</div></button>
+        </div>
+        <div class="explanation-box" id="exp_30">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Thì hiện tại hoàn thành "has + adv + V3/ed": <span class="highlight-target">improved</span> (đã cải thiện đáng kể chất lượng dịch vụ công).</div>
+        </div>
+      </div>
+
+      <!-- Q31 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 31</span><span class="q-type-pill">WORD FORMATION</span></div>
+        <div class="q-text">Living in a noisy and polluted environment can make urban residents feel very ____________________. <strong>(COMFORT)</strong></div>
+        <div class="options-grid" id="optgrid_31">
+          <button class="option-btn" onclick="chooseAnswer(31, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">uncomfortable</div></button>
+          <button class="option-btn" onclick="chooseAnswer(31, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">comfortable</div></button>
+          <button class="option-btn" onclick="chooseAnswer(31, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">discomfort</div></button>
+          <button class="option-btn" onclick="chooseAnswer(31, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">uncomfortably</div></button>
+        </div>
+        <div class="explanation-box" id="exp_31">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Sau linking verb "feel very" cần một tính từ. Do sống trong môi trường ồn ào và ô nhiễm ("noisy and polluted") nên phải dùng tính từ mang nghĩa phủ định: <span class="highlight-target">uncomfortable</span> (khó chịu, không thoải mái).</div>
+        </div>
+      </div>
+
+      <!-- Q32 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 32</span><span class="q-type-pill">WORD FORMATION</span></div>
+        <div class="q-text">The proposed solution sounds ____________________, but may be difficult to implement. <strong>(REASON)</strong></div>
+        <div class="options-grid" id="optgrid_32">
+          <button class="option-btn" onclick="chooseAnswer(32, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">reasonable</div></button>
+          <button class="option-btn" onclick="chooseAnswer(32, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">unreasonable</div></button>
+          <button class="option-btn" onclick="chooseAnswer(32, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">reasonably</div></button>
+          <button class="option-btn" onclick="chooseAnswer(32, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">reasoning</div></button>
+        </div>
+        <div class="explanation-box" id="exp_32">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Sau động từ liên kết "sounds" cần một tính từ. Vì vế sau dùng "but may be difficult to implement" (nhưng có thể khó thực hiện), nên vế trước mang nghĩa tích cực: <span class="highlight-target">reasonable</span> (nghe có vẻ hợp lý).</div>
+        </div>
+      </div>
+
+      <!-- Q33 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 33</span><span class="q-type-pill">WORD FORMATION</span></div>
+        <div class="q-text">People of the same generations often share common ____________________ and cultural values. <strong>(BELIEVE)</strong></div>
+        <div class="options-grid" id="optgrid_33">
+          <button class="option-btn" onclick="chooseAnswer(33, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">beliefs</div></button>
+          <button class="option-btn" onclick="chooseAnswer(33, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">believers</div></button>
+          <button class="option-btn" onclick="chooseAnswer(33, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">believable</div></button>
+          <button class="option-btn" onclick="chooseAnswer(33, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">believing</div></button>
+        </div>
+        <div class="explanation-box" id="exp_33">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Song hành với danh từ số nhiều "cultural values" sau tính từ "common" là danh từ số nhiều <span class="highlight-target">beliefs</span> (những niềm tin/quan niệm chung).</div>
+        </div>
+      </div>
+
+      <!-- Q34 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 34</span><span class="q-type-pill">PREPOSITION</span></div>
+        <div class="q-text">Complete with a suitable preposition:<br>Reducing processed sugar intake plays a crucial role __________ preventing chronic diseases like type 2 diabetes.</div>
+        <div class="options-grid" id="optgrid_34">
+          <button class="option-btn" onclick="chooseAnswer(34, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">in</div></button>
+          <button class="option-btn" onclick="chooseAnswer(34, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">on</div></button>
+          <button class="option-btn" onclick="chooseAnswer(34, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">at</div></button>
+          <button class="option-btn" onclick="chooseAnswer(34, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">for</div></button>
+        </div>
+        <div class="explanation-box" id="exp_34">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm cố định: <span class="highlight-target">play a crucial role in (doing) something</span> (đóng vai trò quan trọng trong việc gì).</div>
+        </div>
+      </div>
+
+      <!-- Q35 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 35</span><span class="q-type-pill">PREPOSITION</span></div>
+        <div class="q-text">Complete with a suitable preposition:<br>Some elderly people find it difficult to keep up __________ the rapid development of modern technology.</div>
+        <div class="options-grid" id="optgrid_35">
+          <button class="option-btn" onclick="chooseAnswer(35, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">with</div></button>
+          <button class="option-btn" onclick="chooseAnswer(35, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">to</div></button>
+          <button class="option-btn" onclick="chooseAnswer(35, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">for</div></button>
+          <button class="option-btn" onclick="chooseAnswer(35, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">on</div></button>
+        </div>
+        <div class="explanation-box" id="exp_35">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm động từ: <span class="highlight-target">keep up with something</span> (bắt kịp, theo kịp tốc độ phát triển của cái gì).</div>
+        </div>
+      </div>
+
+      <!-- Q36 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 36</span><span class="q-type-pill">PREPOSITION</span></div>
+        <div class="q-text">Complete with a suitable preposition:<br>Students should be prepared __________ the challenges of living and working in a rapidly changing world.</div>
+        <div class="options-grid" id="optgrid_36">
+          <button class="option-btn" onclick="chooseAnswer(36, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">for</div></button>
+          <button class="option-btn" onclick="chooseAnswer(36, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">with</div></button>
+          <button class="option-btn" onclick="chooseAnswer(36, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">about</div></button>
+          <button class="option-btn" onclick="chooseAnswer(36, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">in</div></button>
+        </div>
+        <div class="explanation-box" id="exp_36">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cấu trúc: <span class="highlight-target">be prepared for something</span> (chuẩn bị sẵn sàng cho điều gì).</div>
+        </div>
+      </div>
+
+      <!-- Q37 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 37</span><span class="q-type-pill">PREPOSITION</span></div>
+        <div class="q-text">Complete with a suitable preposition:<br>Young activists sometimes feel misunderstood __________ older voters who prioritize traditional policies.</div>
+        <div class="options-grid" id="optgrid_37">
+          <button class="option-btn" onclick="chooseAnswer(37, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">by</div></button>
+          <button class="option-btn" onclick="chooseAnswer(37, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">with</div></button>
+          <button class="option-btn" onclick="chooseAnswer(37, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">from</div></button>
+          <button class="option-btn" onclick="chooseAnswer(37, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">to</div></button>
+        </div>
+        <div class="explanation-box" id="exp_37">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cấu trúc bị động với phân từ quá khứ: <span class="highlight-target">feel misunderstood by someone</span> (cảm thấy bị hiểu lầm bởi ai đó).</div>
+        </div>
+      </div>
+
+      <!-- Q38 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 38</span><span class="q-type-pill">PREPOSITION</span></div>
+        <div class="q-text">Complete with a suitable preposition:<br>My dad used to suffer __________ serious headaches when he was young.</div>
+        <div class="options-grid" id="optgrid_38">
+          <button class="option-btn" onclick="chooseAnswer(38, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">from</div></button>
+          <button class="option-btn" onclick="chooseAnswer(38, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">of</div></button>
+          <button class="option-btn" onclick="chooseAnswer(38, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">with</div></button>
+          <button class="option-btn" onclick="chooseAnswer(38, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">by</div></button>
+        </div>
+        <div class="explanation-box" id="exp_38">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm động từ cố định: <span class="highlight-target">suffer from (a disease / pain)</span> (mắc bệnh hoặc chịu đựng cơn đau gì).</div>
+        </div>
+      </div>
+
+      <!-- Q39 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 39</span><span class="q-type-pill">SENTENCE TRANSFORMATION</span></div>
+        <div class="q-text">Complete the sentence with NO MORE THAN FIVE WORDS, using the word in brackets:<br>It is strictly forbidden to drop litter in the smart park. <strong>(MUST)</strong><br>→ You ______________________________ in the smart park.</div>
+        <div class="options-grid" id="optgrid_39">
+          <button class="option-btn" onclick="chooseAnswer(39, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">must not drop litter / mustn't drop litter</div></button>
+          <button class="option-btn" onclick="chooseAnswer(39, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">must not dropping litter</div></button>
+          <button class="option-btn" onclick="chooseAnswer(39, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">do not must drop litter</div></button>
+          <button class="option-btn" onclick="chooseAnswer(39, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">must to not drop litter</div></button>
+        </div>
+        <div class="explanation-box" id="exp_39">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> "It is strictly forbidden to V" (Bị nghiêm cấm làm gì) = <span class="highlight-target">must not drop litter</span> (4 từ) hoặc <span class="highlight-target">mustn't drop litter</span> (3 từ).</div>
+        </div>
+      </div>
+
+      <!-- Q40 -->
+      <div class="question-card">
+        <div class="q-header"><span class="q-number-pill">Question 40</span><span class="q-type-pill">SENTENCE TRANSFORMATION</span></div>
+        <div class="q-text">Complete the sentence with NO MORE THAN FIVE WORDS, using the word in brackets:<br>The manager responded to the complaint in a professional way. <strong>(PROFESSIONALLY)</strong><br>→ The manager ______________________________ the complaint.</div>
+        <div class="options-grid" id="optgrid_40">
+          <button class="option-btn" onclick="chooseAnswer(40, 'A', true, this)"><div class="opt-letter">A</div><div class="opt-text">responded professionally to / professionally responded to</div></button>
+          <button class="option-btn" onclick="chooseAnswer(40, 'B', false, this)"><div class="opt-letter">B</div><div class="opt-text">professionally responded</div></button>
+          <button class="option-btn" onclick="chooseAnswer(40, 'C', false, this)"><div class="opt-letter">C</div><div class="opt-text">was professionally responded to</div></button>
+          <button class="option-btn" onclick="chooseAnswer(40, 'D', false, this)"><div class="opt-letter">D</div><div class="opt-text">responded in professionally to</div></button>
+        </div>
+        <div class="explanation-box" id="exp_40">
+          <div class="exp-title">⚡ GIẢI THÍCH CHI TIẾT</div>
+          <div class="why-correct-box"><strong>✅ TẠI SAO ĐÚNG?</strong> Cụm "in a professional way" được thay bằng trạng từ "professionally". Đặc biệt lưu ý động từ "respond" là nội động từ nên bắt buộc phải giữ lại giới từ <strong>to</strong> trước tân ngữ "the complaint": <span class="highlight-target">responded professionally to</span> (hoặc <span class="highlight-target">professionally responded to</span>) (3 từ).</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="submit-bar">
+      <button class="btn-submit" onclick="submitTest()">
+        <span>🚀</span> NỘP BÀI & XEM ĐÁNH GIÁ TỔNG KẾT
+      </button>
+    </div>
+
+    <!-- BANNER TUYỂN SINH CẬP NHẬT CHUẨN XÁC THEO YÊU CẦU CỦA CÔ LÊ HẰNG -->
+    <div class="promo-banner">
+      <div class="promo-title">
+        PH HS đăng kí học tiếng anh Khối 1 đến 12, IELTS vui lòng liên hệ Ms Lê Hằng English - zalo 0584 965 348 - Online + Offline tại Linh Đàm
+      </div>
+      <div>
+        <div class="promo-phone-pill">
+          <span>📲</span> Zalo: 0584 965 348 (Ms Lê Hằng English)
+        </div>
+      </div>
+      <div class="promo-sub">
+        ✨ Hình thức học: Online + Offline tại Linh Đàm · Luyện thi chuyên sâu Khối 1 → 12 & IELTS hiệu quả cao!
+      </div>
+    </div>
+
+  </div>
+
+  <div id="resultModal" class="modal-overlay">
+    <div class="modal-card">
+      <div style="font-size: 56px; margin-bottom: 10px;" id="modalEmoji">🎉</div>
+      <h2 style="font-size: 26px; font-weight: 900; color: #2D3436; margin-bottom: 6px;">KẾT QUẢ BÀI KIỂM TRA (MÃ ĐỀ 1112)</h2>
+      <div class="modal-score" id="modalScoreText">0 / 40</div>
+      <div id="modalPercent" style="font-size: 16px; font-weight: 800; color: #636E72;">(0%)</div>
+      <div class="modal-feedback" id="modalTeacherNote"></div>
+      <button class="btn-retry" onclick="restartTest()">🔄 Làm lại bài từ đầu</button>
+    </div>
+  </div>
+
+  <script>
+    let answeredQuestions = {};
+    let totalQuestions = 40;
+
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function initAudio() {
+      if (!audioCtx) audioCtx = new AudioContext();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+    }
+
+    function playCorrectSound() {
+      initAudio();
+      [523.25, 659.25, 783.99, 1046.50].forEach((freq, index) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime + index * 0.08);
+        gain.gain.setValueAtTime(0.18, audioCtx.currentTime + index * 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + index * 0.08 + 0.35);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(audioCtx.currentTime + index * 0.08);
+        osc.stop(audioCtx.currentTime + index * 0.08 + 0.36);
+      });
+    }
+
+    function playWrongSound() {
+      initAudio();
+      [329.63, 293.66, 220.00].forEach((freq, index) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime + index * 0.12);
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime + index * 0.12);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + index * 0.12 + 0.28);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(audioCtx.currentTime + index * 0.12);
+        osc.stop(audioCtx.currentTime + index * 0.12 + 0.3);
+      });
+    }
+
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    let confettiParticles = [];
+
+    function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function triggerConfetti() {
+      confettiParticles = [];
+      const colors = ['#FF4757', '#FDCB6E', '#00C9A7', '#8854C0', '#0984E3', '#00D26A'];
+      for (let i = 0; i < 65; i++) {
+        confettiParticles.push({
+          x: window.innerWidth / 2 + (Math.random() - 0.5) * 200,
+          y: window.innerHeight / 2 - 100,
+          w: Math.random() * 10 + 6,
+          h: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 14,
+          vy: Math.random() * -12 - 4,
+          gravity: 0.45,
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 12,
+          opacity: 1
+        });
+      }
+      animateConfetti();
+    }
+
+    let confettiAnimId = null;
+    function animateConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let alive = false;
+      confettiParticles.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.vy += p.gravity; p.rotation += p.rotationSpeed; p.opacity -= 0.012;
+        if (p.opacity > 0) {
+          alive = true;
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.opacity;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        }
+      });
+      if (alive) confettiAnimId = requestAnimationFrame(animateConfetti);
+      else ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function chooseAnswer(qid, key, isCorrect, btn) {
+      if (answeredQuestions[qid]) return;
+      answeredQuestions[qid] = { chosen: key, isCorrect: isCorrect };
+
+      if (isCorrect) {
+        btn.classList.add('correct');
+        playCorrectSound();
+        triggerConfetti();
+      } else {
+        btn.classList.add('wrong');
+        playWrongSound();
+      }
+
+      const grid = document.getElementById('optgrid_' + qid);
+      grid.querySelectorAll('.option-btn').forEach(b => b.classList.add('disabled'));
+
+      const expBox = document.getElementById('exp_' + qid);
+      if (expBox) expBox.style.display = 'block';
+
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const keys = Object.keys(answeredQuestions);
+      const answeredCount = keys.length;
+      const correctCount = keys.filter(k => answeredQuestions[k].isCorrect).length;
+
+      document.getElementById('starCounter').innerText = correctCount;
+      document.getElementById('correctCounter').innerText = correctCount;
+      document.getElementById('progressBarFill').style.width = ((answeredCount / totalQuestions) * 100) + '%';
+    }
+
+    function submitTest() {
+      const keys = Object.keys(answeredQuestions);
+      const correctCount = keys.filter(k => answeredQuestions[k].isCorrect).length;
+      const percentage = Math.round((correctCount / totalQuestions) * 100);
+
+      document.getElementById('modalScoreText').innerText = correctCount + ' / ' + totalQuestions + ' CÂU ĐÚNG';
+      document.getElementById('modalPercent').innerText = '(' + percentage + '%)';
+
+      let teacherNote = "";
+      let emoji = "🎉";
+
+      if (percentage < 50) {
+        emoji = "💪";
+        teacherNote = "“Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!”<br><br>— <strong>Ms Lê Hằng English</strong>";
+      } else if (percentage >= 50 && percentage <= 80) {
+        emoji = "🌟";
+        teacherNote = "“Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!”<br><br>— <strong>Ms Lê Hằng English</strong>";
+      } else {
+        emoji = "🏆";
+        teacherNote = "“Làm tốt lắm, con cố gắng ring điểm 10 ở lần sau nha!”<br><br>— <strong>Ms Lê Hằng English</strong>";
+      }
+
+      document.getElementById('modalEmoji').innerText = emoji;
+      document.getElementById('modalTeacherNote').innerHTML = teacherNote;
+      document.getElementById('resultModal').style.display = 'flex';
+    }
+
+    function restartTest() {
+      answeredQuestions = {};
+      document.getElementById('resultModal').style.display = 'none';
+      document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('correct', 'wrong', 'disabled'));
+      document.querySelectorAll('.explanation-box').forEach(box => box.style.display = 'none');
+      updateProgress();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
